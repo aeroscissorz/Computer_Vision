@@ -1,6 +1,6 @@
-# Dominant Colors Extraction
+# DynImagic
 
-This Python script extracts dominant colors from an image using k-means clustering and visualizes them along with their RGB values.
+This Python script extracts dominant colors from an image using k-means clustering, visualizes them along with their RGB values and generates individual images with the same pattern.
 
 ## Dependencies
 - OpenCV
