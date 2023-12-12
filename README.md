@@ -2,30 +2,44 @@
 
 This Python script extracts dominant colors from an image using k-means clustering, visualizes them along with their RGB values and generates individual images with the same pattern.
 
-## Dependencies
+## Description
+
+The project involves extracting the dominant colors from a group image (`image_group.jpg`) and applying each dominant color to a single image (`image_single.jpg`). The color change is performed by replacing pixels in the single image that are close to the original dominant color.
+
+## Requirements
+
+- Python (version 3.x)
 - OpenCV
 - NumPy
-- IPython (for displaying images in Jupyter notebooks)
+- scikit-image
+
+Install the required libraries using:
+
+```bash
+pip install opencv-python numpy scikit-image
+```
 
 ## Usage
-1. Clone the repository or download the `Dominant_Colors_Script.py` file.
-2. Install the required dependencies:
-   ```bash
-   pip install opencv-python numpy
-Replace the image path in the script ('/content/Image/0.jpg') with the path to your desired image.
-Run the script.
-The script performs the following tasks:
 
-1. Load and Preprocess Image
-Uses OpenCV to read the input image.
-Converts the image from BGR to RGB color space.
-2. K-Means Clustering for Dominant Colors
-Reshapes the image into a 2D array of pixels.
-Applies k-means clustering to group similar colors together.
-Finds the centers of the clusters, representing dominant colors.
-3. Visualization
-Creates color bars for each dominant color and displays them horizontally.
-Adds RGB values as text to each color bar.
-4. Display and Save Results
-Displays the original image and the visualization of dominant colors.
-Saves the results as images (original_image.jpg and dominant_colors.jpg).
+1. Clone the repository:
+
+```bash
+git clone https://github.com/your-username/color-changing-project.git
+cd color-changing-project
+```
+
+2. Run the Python script:
+
+```bash
+python color_change_script.py
+```
+
+This will generate and display changed versions of `image_single.jpg` using the dominant colors from `image_group.jpg`.
+
+## Files
+
+- `color_change_script.py`: The main Python script for changing colors.
+- `image_single.jpg`: The single image for color change.
+- `image_group.jpg`: The group image containing dominant colors.
+
+
